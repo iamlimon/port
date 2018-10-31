@@ -1,0 +1,122 @@
+body,html {
+  height: 100vh;
+  width: 100vw;
+  background-color: #eee;
+}
+.App {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  height: 105vh;
+}
+
+.App-logo {
+  width: 65px;
+  align-self: flex-start;
+}
+
+.App-header {
+  background-color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 0 40px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 30px;
+  color: #33699a;
+}
+p {
+  color: #33699a;
+  font-size: 16px;
+}
+#nav {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 25px;
+  height: 100px;
+  width: 100%;
+  background: #fff;
+}
+.arrow-icon {
+  width: 50px;
+  margin: 32px auto;
+}
+/* Navigation */
+.nav-icon-container {
+  display: none;
+}
+/*Email View */
+.view-email {
+  display: flex;
+  flex-direction: row;
+}
+.email-mockup {
+  width: 25vw;
+}
+.email-description{
+  text-align: right;
+  width: 40vw;
+  padding-left: 60px;
+  padding-top: 50px;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 45px;
+  }
+  p {
+    font-size: 20px;
+  }
+  #nav {
+    display: block;
+    position: fixed;
+    left: 0;
+    padding: 40px 40px;
+    height: 100vh;
+    width: auto;
+    background: #fff;
+    -webkit-box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
+    -moz-box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
+    box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
+  }
+  #nav h2 {
+    color: #555;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .App-header {
+    padding: 0 40px 0 200px;
+  }
+  .nav-icon-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+  }
+  .nav-icon {
+    height: 35px;
+    margin-top: 40px;
+    fill: #666;
+    transition: all .2s ease;
+  }
+  .nav-icon:hover {
+    height: 38px;
+    fill: #ff7a2c;
+  }
+  }
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 1200px) {  }
+
