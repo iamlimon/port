@@ -1,8 +1,7 @@
 import React from 'react';
-import mockup from '../assets/landing-page-mockups.png';
 import FadeIn from 'react-fade-in';
-import ReactBodymovin from 'react-bodymovin';
-import animationData from '../animation-data.json'
+import ReactBodymovin from 'react-bodymovin/lib/ReactBodymovinFull'
+import animationData from '../data.json'
 
 export const Animation = () => {
 
