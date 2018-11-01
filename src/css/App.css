@@ -19,11 +19,10 @@ body,html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 0 40px;
+  padding: 220px 20px 0 20px;
 }
 
 .App-link {
@@ -45,13 +44,34 @@ p {
   left: 0;
   top: 0;
   padding-top: 25px;
+  padding-bottom: 25px;
   height: 100px;
   width: 100%;
   background: #fff;
+  z-index: 100;
+}
+#nav h2 {
+  color: #555;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 .arrow-icon {
-  width: 50px;
-  margin: 32px auto;
+  position: fixed;
+  bottom: 65px;
+  margin: 0 auto;
+  animation: flex 1s infinite ease;
+}
+@keyframes flex  {
+  0% {
+    width: 50px;
+  }
+  50% {
+    width: 51px;
+  }
+  100% {
+    width: 50px;
+  }
 }
 /* Navigation */
 .nav-icon-container {
@@ -60,16 +80,40 @@ p {
 /*Email View */
 .view-email {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .email-mockup {
-  width: 25vw;
+  display: block;
+  width: 50vw;
+  margin: 20px auto;
 }
 .email-description{
-  text-align: right;
-  width: 40vw;
-  padding-left: 60px;
-  padding-top: 50px;
+  text-align: left;
+  width: 100%;
+}
+.hamburger-menu .line {
+  height: 4px;
+  background: #444;
+  width: 40px;
+  margin-bottom: 6px;
+}
+
+.hamburger-menu {
+  position: absolute;
+  right: 23px;
+  top: 24px;
+}
+.menu {
+  background: rgba(255,255,255, 0.9);
+  padding: 15px 10px 30px 10px;
+}
+.menu p {
+  margin: 0 -10px;
+  padding: 10px 0;
+}
+.menu p:hover {
+  color: #33699a;
+  font-size: 16px;
 }
 @media (min-width: 768px) {
   h1 {
@@ -90,14 +134,9 @@ p {
     -moz-box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
     box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
   }
-  #nav h2 {
-    color: #555;
-    font-size: 20px;
-    font-weight: 300;
-    letter-spacing: 1px;
-  }
   .App-header {
     padding: 0 40px 0 200px;
+    justify-content: center;
   }
   .nav-icon-container {
     display: flex;
@@ -113,6 +152,33 @@ p {
   .nav-icon:hover {
     height: 38px;
     fill: #ff7a2c;
+  }
+  .view-email {
+      flex-direction: row;
+  }
+  .email-description {
+    width: 40vw;
+    text-align: right;
+    padding-left: 60px;
+    padding-top: 50px;
+  }
+  .email-mockup {
+    width: 25vw;
+    margin: 0;
+  }
+  .expirement-mockup {
+    width: 33vw;
+    -webkit-box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
+    -moz-box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
+    box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
+    margin: 0;
+  }
+  
+  .hamburger-menu, .menu {
+    display: none;
+  }
+  .view-email, .view-about {
+    max-width: 1200px;
   }
   }
 

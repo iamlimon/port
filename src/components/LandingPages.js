@@ -4,7 +4,7 @@ import FadeIn from 'react-fade-in';
 
 export const LandingPages = () => {
     return (
-        <FadeIn delay="100" transitionDuration="500">
+        <FadeIn delay="10" transitionDuration="900">
         <div className="view-email">
             <div className="email-project">
                 <img className="email-mockup" src={mockup} alt="email-template" />

@@ -20,38 +20,6 @@ class App extends Component {
     })
   }
 
-//   handleScroll = (e) => {
-//     const views = ['about','email','expirement','landingpage']; 
-//     console.log(e.target.body.scrollTop);
-//     console.log(window.pageYOffset);
-//     if(window.pageYOffset > 80) {
-//       console.log('80')
-//       var newState = "email";
-//       this.setState({
-//         view: newState
-//       })
-//     }
-//     console.log('logging scroll')
-//     if (e.target.body.scrollTop < 1) {            
-//         this.setState({
-//           view: views[i]
-//         })
-//     } 
-//     else {
-//       console.log('Less than 100')
-//     }
-// }
-
-  componentDidMount = () => {
-    window.addEventListener('scroll', this.handleScroll, { passive: true })
-    
-  }
-
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.handleScroll)
-    console.log('Scroll event removed to window')
-  }
-
   render() {
     console.log(this.state);
     let view = this.state.view;
