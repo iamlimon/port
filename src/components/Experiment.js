@@ -12,10 +12,8 @@ export const Experiment = () => {
             <div className="email-description">
             <h1>We like to experiment</h1>
             <p>
-                Interactive Maps<br/>
-                Loan Officer Catalog<br/>
-                Infographic<br/>
-                Mortgage Calculator
+                Jeff Bezos likes to say, “Our success at Amazon is a function of how many experiments we do per year, per month, per week, per day…”
+                Jeff Holden, who has built experimental engines at Amazon, Groupon, and Uber, agrees: “The philosophy is you have to build your company to be a big experimental engine and it has to start right at the beginning.”
             </p>
             </div>
         </div>

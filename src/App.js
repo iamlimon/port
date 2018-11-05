@@ -10,9 +10,18 @@ import { Animation } from './components/Animation';
 
 class App extends Component {
   state = {
-    view: 'about'
+    view: 'about',
+    scrollAmount: 0
   }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll, { passive: true })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
   
+  }
   handleClick = (e) => {
     const id = e.target.id;
     this.setState({
@@ -20,30 +29,51 @@ class App extends Component {
     })
   }
 
+
+  handleScroll = (e) => {
+    let newScrollAmount = this.state.scrollAmount + 1;
+    this.setState({ scrollAmount: newScrollAmount  })
+     //If I scroll 50px go to the next item in the array
+    if (newScrollAmount >= 10) {
+      if (this.state.view === 'about') {
+        this.setState({ view: 'email', scrollAmount: 0})
+      }
+      else if (this.state.view === 'email') {
+        this.setState({ view: 'landingpages', scrollAmount: 0})
+      }
+      else if (this.state.view === 'landingpages') {
+        this.setState({ view: 'animation', scrollAmount: 0})
+      }
+      else {
+        this.setState({ view: 'about', scrollAmount: 0})
+      }
+    }
+    console.log(this.state.scrollAmount);
+  }
+
   render() {
-    console.log(this.state);
-    let view = this.state.view;
-    if ( view === 'about' ) {
-      view = <About />;
-    } else if (view === 'email') {
-      view = <Email />;
+    console.log('Current View: ' + this.state.view);
+    let currentView = this.state.view;
+    if ( currentView  === 'about' ) {
+      currentView  = <About />;
+    } else if (currentView  === 'email') {
+      currentView  = <Email />;
     }
-    else if (view === 'experiment') {
-      view = <Experiment />;
+    else if (currentView  === 'experiment') {
+      currentView  = <Experiment />;
     }
-    else if (view === 'landingpages') {
-      view = <LandingPages  />;
+    else if (currentView  === 'landingpages') {
+      currentView  = <LandingPages  />;
     }
     else {
-      view = <Animation  />;
+      currentView  = <Animation  />;
     }
-
 
     return (
       <div className="App">
         <header className="App-header">
           <Nav onClick={this.handleClick} />
-          { view }
+          { currentView  }
         </header>
        </div>
     );

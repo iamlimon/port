@@ -22,7 +22,7 @@ body,html {
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 220px 20px 0 20px;
+  padding: 180px 20px 0 20px;
 }
 
 .App-link {
@@ -32,11 +32,13 @@ body,html {
 h1 {
   font-weight: 300;
   font-size: 30px;
+  line-height: 1.6;
   color: #33699a;
 }
 p {
   color: #33699a;
   font-size: 16px;
+  line-height: 1.5;
 }
 #nav {
   display: block;
@@ -58,21 +60,8 @@ p {
   letter-spacing: 1px;
 }
 .arrow-icon {
-  position: fixed;
-  bottom: 65px;
-  margin: 0 auto;
-  animation: flex 1s infinite ease;
-}
-@keyframes flex  {
-  0% {
-    width: 50px;
-  }
-  50% {
-    width: 51px;
-  }
-  100% {
-    width: 50px;
-  }
+  margin: 40px auto 0 auto;
+  width: 50px;
 }
 /* Navigation */
 .nav-icon-container {
@@ -86,6 +75,7 @@ p {
 .email-mockup {
   display: block;
   width: 50vw;
+  max-width: 400px;
   margin: 20px auto;
 }
 .email-description{
@@ -118,7 +108,13 @@ p {
   color: #33699a;
   font-size: 16px;
 }
-@media (min-width: 768px) {
+.animation-project {
+  max-width: 500px;
+}
+.tooltip {
+  display: none;
+}
+@media (min-width: 1000px) {
   h1 {
     font-size: 45px;
   }
@@ -150,7 +146,7 @@ p {
     height: 35px;
     margin-top: 40px;
     fill: #666;
-    transition: all .2s ease;
+    transition: all .5 ease;
   }
   .nav-icon:hover {
     height: 38px;
@@ -170,7 +166,7 @@ p {
     margin: 0;
   }
   .expirement-mockup {
-    width: 33vw;
+    width: 30vw;
     -webkit-box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
     -moz-box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
     box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
@@ -182,6 +178,34 @@ p {
   }
   .view-email, .view-about {
     max-width: 1200px;
+  }
+  .view-about {
+    padding: 0 50px;
+  }
+  .nav-icon:hover + .tooltip{
+      display: block;
+  }
+  .tooltip {
+    height: 0;
+    width: 0;
+  }
+
+  .tooltip-text {
+      color: #666;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 5px 10px;
+      border: 1px solid #666;
+      display: block;
+      text-align: center;
+      width: 120px;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.9);
+      position: relative;
+      left: 100px;
+      top: -30px;
   }
   }
 

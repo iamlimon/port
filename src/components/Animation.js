@@ -15,7 +15,7 @@ export const Animation = () => {
     return (
         <FadeIn delay="100" transitionDuration="500">
         <div className="view-email">
-            <div className="email-project">
+            <div className="animation-project">
                 <ReactBodymovin options={bodymovinOptions} />
             </div>
             <div className="email-description">
