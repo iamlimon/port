@@ -1,15 +1,13 @@
 import React from 'react';
-import FadeIn from 'react-fade-in';
 import map from '../assets/hsbc-map.png';
 
 export const Experiment = () => {
     return (
-        <FadeIn delay="100" transitionDuration="500">
-        <div className="view-email">
-            <div className="email-project">
+        <div id="view" className="view-email">
+            <div className="view-project">
                 <img className="expirement-mockup" src={map} alt="email-template" />
             </div>
-            <div className="email-description">
+            <div className="view-description">
             <h1>We like to experiment</h1>
             <p>
                 Jeff Bezos likes to say, “Our success at Amazon is a function of how many experiments we do per year, per month, per week, per day…”
@@ -17,6 +15,5 @@ export const Experiment = () => {
             </p>
             </div>
         </div>
-        </FadeIn>
     )
 }

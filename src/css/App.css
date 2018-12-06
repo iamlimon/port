@@ -1,34 +1,43 @@
 body,html {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #eee;
-}
-.App {
-  text-align: center;
   font-family: 'Lato', sans-serif;
-  height: 105vh;
+  box-sizing: content-box;
 }
-
-.App-logo {
-  width: 65px;
-  align-self: flex-start;
+body {
+  background:url(../assets/softvu-logo-bg-v2.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-animation: backgroundScroll 30s infinite alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation: backgroundScroll 30s infinite alternate;
+  animation-fill-mode: forwards;
 }
-
-.App-header {
-  background-color: #eee;
+.App-wrapper {
+  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 180px 20px 0 20px;
 }
-
-.App-link {
-  color: #61dafb;
+@keyframes backgroundScroll {
+  0% { background-position: 0 0; }
+  50% { background-position: 200px 100px; }
+  100% { background-position: -100px 200px; }
 }
+@-webkit-keyframes backgroundScroll {
+  0% { background-position: 0 0; }
+  50% { background-position: 200px 100px; }
+  100% { background-position: -100px 200px; }
+} 
 
+
+.App-logo {
+  width: 50px;
+  align-self: flex-start;
+}
 h1 {
   font-weight: 300;
   font-size: 30px;
@@ -46,7 +55,6 @@ p {
   left: 0;
   top: 0;
   padding-top: 25px;
-  padding-bottom: 25px;
   height: 100px;
   width: 100%;
   background: #fff;
@@ -55,7 +63,7 @@ p {
 }
 #nav h2 {
   color: #555;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   letter-spacing: 1px;
 }
@@ -78,7 +86,7 @@ p {
   max-width: 400px;
   margin: 20px auto;
 }
-.email-description{
+.view-description{
   text-align: left;
   width: 100%;
 }
@@ -88,7 +96,6 @@ p {
   width: 40px;
   margin-bottom: 6px;
 }
-
 .hamburger-menu {
   position: absolute;
   right: 23px;
@@ -114,6 +121,25 @@ p {
 .tooltip {
   display: none;
 }
+#view {
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+}
+#view.view-email {
+  flex-direction: column;
+  justify-content: center;
+}
+.expirement-mockup {
+  width: 60vw;
+}
+.page-content {
+  margin-top: 60px;
+}
 @media (min-width: 1000px) {
   h1 {
     font-size: 45px;
@@ -125,13 +151,16 @@ p {
     display: block;
     position: fixed;
     left: 0;
-    padding: 40px 40px;
     height: 100vh;
     width: auto;
+    padding-bottom: 25px;
     background: #fff;
-    -webkit-box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
-    -moz-box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
-    box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 60px 0px 10px #bac8d3;
+    -moz-box-shadow: 0px 0px 10px #bac8d3;
+    box-shadow: 0px 0px 10px #bac8d3;
+  }
+  #nav h2 {
+    margin-bottom: 40px;
   }
   .App-header {
     padding: 0 40px 0 200px;
@@ -144,26 +173,26 @@ p {
   }
   .nav-icon {
     height: 35px;
-    margin-top: 40px;
+    padding: 20px 50px;
     fill: #666;
-    transition: all .5 ease;
+    transition: all 1 ease;
   }
   .nav-icon:hover {
-    height: 38px;
     fill: #ff7a2c;
   }
   .view-email {
       flex-direction: row;
   }
-  .email-description {
+  .view-description{
     width: 40vw;
-    text-align: right;
     padding-left: 60px;
-    padding-top: 50px;
   }
   .email-mockup {
     width: 25vw;
     margin: 0;
+  }
+  .view-project {
+    width: 32vw;
   }
   .expirement-mockup {
     width: 30vw;
@@ -172,15 +201,14 @@ p {
     box-shadow: 6px 9px 38px -15px rgba(0,0,0,0.52);
     margin: 0;
   }
-  
+  .page-content {
+    margin-left: 180px;
+  }
   .hamburger-menu, .menu {
     display: none;
   }
-  .view-email, .view-about {
-    max-width: 1200px;
-  }
-  .view-about {
-    padding: 0 50px;
+  .about-content {
+    width: 70vw;
   }
   .nav-icon:hover + .tooltip{
       display: block;
@@ -206,6 +234,16 @@ p {
       position: relative;
       left: 100px;
       top: -30px;
+  }
+  #view {
+    width: 100vw;
+  }
+  #view.view-email {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page-content {
+    margin-top: 0;
   }
   }
 

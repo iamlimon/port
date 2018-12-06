@@ -6,22 +6,15 @@ import { Email } from './components/Email';
 import { Experiment } from './components/Experiment';
 import { LandingPages } from './components/LandingPages';
 import { Animation } from './components/Animation';
+import ReactPageScroller from "react-page-scroller";
 
 
 class App extends Component {
   state = {
     view: 'about',
-    scrollAmount: 0
+    currentPage: 0
   }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll, { passive: true })
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
   
-  }
   handleClick = (e) => {
     const id = e.target.id;
     this.setState({
@@ -29,30 +22,19 @@ class App extends Component {
     })
   }
 
-
-  handleScroll = (e) => {
-    let newScrollAmount = this.state.scrollAmount + 1;
-    this.setState({ scrollAmount: newScrollAmount  })
-     //If I scroll 50px go to the next item in the array
-    if (newScrollAmount >= 10) {
-      if (this.state.view === 'about') {
-        this.setState({ view: 'email', scrollAmount: 0})
-      }
-      else if (this.state.view === 'email') {
-        this.setState({ view: 'landingpages', scrollAmount: 0})
-      }
-      else if (this.state.view === 'landingpages') {
-        this.setState({ view: 'animation', scrollAmount: 0})
-      }
-      else {
-        this.setState({ view: 'about', scrollAmount: 0})
-      }
-    }
-    console.log(this.state.scrollAmount);
+  goToPage = (e) => {
+    console.log('clicked');
+    const page = e.target.id;
+    this.reactPageScroller.goToPage(page);
   }
+
+  pageOnChange = (number) => {
+    this.setState({currentPage: number});
+  };
 
   render() {
     console.log('Current View: ' + this.state.view);
+    console.log('Current Page: ' + this.state.currentPage);
     let currentView = this.state.view;
     if ( currentView  === 'about' ) {
       currentView  = <About />;
@@ -70,11 +52,17 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <Nav onClick={this.handleClick} />
-          { currentView  }
-        </header>
+      <div className="App-wrapper">
+          <Nav onClick={this.goToPage} />
+          <div className="page-content">
+            <ReactPageScroller animationTimer={900} ref={c => this.reactPageScroller = c} pageOnChange={this.pageOnChange}>
+              <About />
+              <Email />
+              <LandingPages />
+              <Experiment />
+              <Animation />
+            </ReactPageScroller>
+          </div>
        </div>
     );
   }
