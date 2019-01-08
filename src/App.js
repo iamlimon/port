@@ -37,6 +37,7 @@ class App extends Component {
               <Experiment />
               <Animation />
             </ReactPageScroller>
+            <p className="scroll-down">&#x2190;&nbsp;&nbsp;Scroll Down</p>
           </div>
        </div>
     );
