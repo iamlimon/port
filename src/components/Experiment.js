@@ -3,9 +3,9 @@ import map from '../assets/hsbc-map.png';
 
 export const Experiment = () => {
     return (
-        <div id="view" className="view-email">
-            <div className="view-project">
-                <img className="expirement-mockup" src={map} alt="email-template" />
+        <div className="view" id="view-expirement">
+            <div className="view-mockups">
+                <img className="mockup-expirement" src={map} alt="email-template" />
             </div>
             <div className="view-description">
             <h1>We like to experiment</h1>

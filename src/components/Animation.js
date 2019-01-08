@@ -12,15 +12,21 @@ export const Animation = () => {
       }
     
     return (
-        <div id="view" className="view-email">
-            <div className="view-project">
+        <div className="view" id="view-animation">
+            <div className="view-mockups">
                 <div className="animation-project">
                     <ReactBodymovin options={bodymovinOptions} />
                 </div>
             </div>
             <div className="view-description">
-            <h1>We do animation</h1>
-            <p>You can call it magic, but in reality there is no magic wand that can resolve our problems. The solution rests with our team of Creative Wizards’s hard work and discipline. They have developed a 3-step approach to systematically produce great design every single time.</p>
+            <h1>We do video</h1>
+            <p>View some of our videos</p>
+            <ul>
+                <li><a href="https://softvu.wistia.com/medias/xph23ipb9c" target="_Blank">Truhome Animaion</a></li>
+                <li><a href="https://softvu.wistia.com/medias/w31b1w83y9" target="_blank">HomeDirect</a></li>
+                <li><a href="https://softvu.wistia.com/medias/3qy858xouz" target="_blank">Christmas eCard</a></li>
+                <li><a href="https://softvu.wistia.com/medias/5zof88inqm" target="_blank">Talking head video</a></li>
+            </ul>
             </div>
         </div>
     )

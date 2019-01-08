@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Layer_1" className="nav-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 360 360" style="enable-background:new 0 0 360 360;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#414141;}
+	.st0:hover {fill:green;}
 </style>
 <g>
 	<path class="st0" d="M651.59-59.9H430.41c-18.41,0-33.39,14.98-33.39,33.39v135.24c0,18.42,14.98,33.4,33.39,33.4h76.28
