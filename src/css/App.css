@@ -138,6 +138,11 @@ li {
 } 
 
 @media (min-width: 1000px) {
+  .navigation {
+    position: relative;
+    width: auto;
+    z-index: 100;
+  }
   /* Base Styles */
   h1 {
     font-size: 45px;
