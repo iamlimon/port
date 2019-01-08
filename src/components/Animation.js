@@ -22,10 +22,10 @@ export const Animation = () => {
             <h1>We do video</h1>
             <p>View some of our videos</p>
             <ul>
-                <li><a href="https://softvu.wistia.com/medias/xph23ipb9c" target="_Blank">Truhome Animaion</a></li>
-                <li><a href="https://softvu.wistia.com/medias/w31b1w83y9" target="_blank">HomeDirect</a></li>
-                <li><a href="https://softvu.wistia.com/medias/3qy858xouz" target="_blank">Christmas eCard</a></li>
-                <li><a href="https://softvu.wistia.com/medias/5zof88inqm" target="_blank">Talking head video</a></li>
+                <li><a href="https://softvu.wistia.com/medias/xph23ipb9c" rel="noopener noreferrer" target="_blank">Truhome Animaion</a></li>
+                <li><a href="https://softvu.wistia.com/medias/w31b1w83y9" rel="noopener noreferrer" target="_blank">HomeDirect</a></li>
+                <li><a href="https://softvu.wistia.com/medias/3qy858xouz" rel="noopener noreferrer" target="_blank">Christmas eCard</a></li>
+                <li><a href="https://softvu.wistia.com/medias/5zof88inqm" rel="noopener noreferrer" target="_blank">Talking head video</a></li>
             </ul>
             </div>
         </div>

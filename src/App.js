@@ -30,7 +30,7 @@ class App extends Component {
             <Nav onClick={this.goToPage} />
           </div>
           <div className="page-content">
-            <ReactPageScroller containerWidth="100%" ref={c => this.reactPageScroller = c} pageOnChange={this.pageOnChange}>
+            <ReactPageScroller containerWidth="100%" containerHeight="100vh" ref={c => this.reactPageScroller = c} pageOnChange={this.pageOnChange}>
               <About />
               <Email />
               <LandingPages />

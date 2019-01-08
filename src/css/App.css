@@ -32,7 +32,7 @@ li {
 }
 .App-wrapper {
   display: grid;
-  grid-template-columns: 100vw;
+  grid-template-columns: 100%;
   grid-template-rows: 90px auto;
 }
 .App-logo {
@@ -40,6 +40,11 @@ li {
   margin: 25px 0px 25px 17px;
 }
 /* Navigation */
+.navigation {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
 #nav {
   display: block;
   background: #fff;
