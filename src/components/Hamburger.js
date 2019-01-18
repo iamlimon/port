@@ -27,7 +27,8 @@ export class Hamburger extends React.Component{
                 <p onClick={this.props.onClick} id="0" >About</p>
                 <p onClick={this.props.onClick} id="1" >Email</p>
                 <p onClick={this.props.onClick} id="2" >Landing Pages</p>
-                <p onClick={this.props.onClick} id="3" >Animation</p>
+                <p onClick={this.props.onClick} id="3" >Experiment</p>
+                <p onClick={this.props.onClick} id="4" >Animation</p>
             </div>
             </FadeIn>
             }
