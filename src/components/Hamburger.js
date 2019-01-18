@@ -21,6 +21,7 @@ export class Hamburger extends React.Component{
                 <div className="line"></div>
                 <div className="line"></div>
             </div>
+            <div id="mobile-menu">
             {!this.state.isHidden && 
             <FadeIn delay="100" transitionDuration="500">
             <div className="menu">
@@ -32,6 +33,7 @@ export class Hamburger extends React.Component{
             </div>
             </FadeIn>
             }
+            </div>
             </div>
         )
     }
