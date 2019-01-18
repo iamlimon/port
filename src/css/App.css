@@ -39,6 +39,9 @@ li {
 }
 .App-logo {
   width: 40px;
+} 
+.page-content > div  {
+  height: calc(100vh - 90px) !important;
 }
 /* Navigation */
 .navigation {
