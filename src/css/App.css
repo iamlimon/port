@@ -96,7 +96,8 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 10px;
   padding: 0 32px;
 }
 .email-mockup {
@@ -238,6 +239,7 @@ li {
   /* View */
   .view {
     flex-direction: row;
+    margin-top: 0;
     justify-content: center;
   }
   .view-description{
