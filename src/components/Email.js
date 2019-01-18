@@ -1,4 +1,5 @@
 import React from 'react';
+import Zoom from 'react-reveal/Zoom';
 import MomentumMockupDesktop from '../assets/mockup-momentum-et-deskop.png';
 import MomentumMockupMobile from '../assets/mockup-momentum-et-mobile.png';
 import EratesMockupDesktop from '../assets/mockup-erates-et-desktop.png';
@@ -8,9 +9,9 @@ import NAMockupMobile from '../assets/mockup-na-et-mobile.png';
 
 
 let emailProjects =  [
-    {'h1': 'Momentum Email Templates', 'p': 'This is the momentum creative work.', 'desktopmockup': MomentumMockupDesktop,'mobilemockup': MomentumMockupMobile},
-    {'h1': 'eRates Email Templates', 'p': 'This is the eRates creative work.', 'desktopmockup': EratesMockupDesktop,'mobilemockup': EratesMockupMobile},
-    {'h1': 'North American Mortgage Company', 'p': 'This is the North American creative work.', 'desktopmockup': NAMockupDesktop,'mobilemockup': NAMockupMobile}
+    {'h1': 'Email Templates', 'p': 'Momentum Loans', 'desktopmockup': MomentumMockupDesktop,'mobilemockup': MomentumMockupMobile},
+    {'h1': 'Email Templates', 'p': 'eRates Mortgage', 'desktopmockup': EratesMockupDesktop,'mobilemockup': EratesMockupMobile},
+    {'h1': 'Email Templates', 'p': 'North American Mortgage Company', 'desktopmockup': NAMockupDesktop,'mobilemockup': NAMockupMobile}
 ]
 
 export class Email extends React.Component {
@@ -29,13 +30,19 @@ export class Email extends React.Component {
         this.setState({currentProject: changeProjectID})
     }
 
+    handleClick = (e) => {
+        const imgSrc = e.target.src;
+        this.props.onClick(imgSrc);
+    }
+
     render() {
         const setProject = this.state.currentProject - 1;
         return (
+            <Zoom exit={true}>
             <div className="view" id="view-email">
                 <div className="view-mockups">
-                    <img src={emailProjects[setProject].desktopmockup} className="mockup-desktop" alt="email-template" />
-                    <img src={emailProjects[setProject].mobilemockup} className="mockup-mobile" alt="email-template" />
+                    <img src={emailProjects[setProject].desktopmockup} onClick={this.handleClick} className="mockup-desktop" alt="email-template" />
+                    <img src={emailProjects[setProject].mobilemockup} onClick={this.handleClick}  className="mockup-mobile" alt="email-template" />
                 </div>
                 <div className="view-description">
                 <h1>{emailProjects[setProject].h1}</h1>
@@ -47,6 +54,7 @@ export class Email extends React.Component {
                 </div>
                 </div>
             </div>
+            </Zoom>
         )
     }
 }

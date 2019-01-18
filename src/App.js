@@ -6,12 +6,15 @@ import { Email } from './components/Email';
 import { Experiment } from './components/Experiment';
 import { LandingPages } from './components/LandingPages';
 import { Animation } from './components/Animation';
+import Modal from './components/Modal';
 import ReactPageScroller from "react-page-scroller";
 
 
 class App extends Component {
   state = {
-    currentPage: 1
+    currentPage: 1,
+    modalPic: ' ',
+    modalVisibility: 'hide'
   }
 
   goToPage = (e) => {
@@ -23,6 +26,11 @@ class App extends Component {
     this.setState({currentPage: num});
   };
 
+
+  onClickModal = pic => { this.setState({ modalPic: pic, modalVisibility: 'show' }) }
+
+  exitModal = () => { this.setState({ modalVisibility: 'hide'}); }
+
   render() {
     return (
       <div className="App-wrapper">
@@ -32,12 +40,13 @@ class App extends Component {
           <div className="page-content">
             <ReactPageScroller containerWidth="100%" containerHeight="100vh" ref={c => this.reactPageScroller = c} pageOnChange={this.pageOnChange}>
               <About />
-              <Email />
-              <LandingPages />
-              <Experiment />
+              <Email onClick={this.onClickModal}/>
+              <LandingPages onClick={this.onClickModal} />
+              <Experiment onClick={this.onClickModal} />
               <Animation />
             </ReactPageScroller>
             <p className="scroll-down">&#x2190;&nbsp;&nbsp;Scroll Down</p>
+            <Modal exitModal={this.exitModal} visibility={this.state.modalVisibility} modalPic={this.state.modalPic} />
           </div>
        </div>
     );

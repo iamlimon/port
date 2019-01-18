@@ -19,6 +19,7 @@ h1 {
   font-weight: 300;
   font-size: 30px;
   line-height: 1.6;
+  letter-spacing: 1px;
   margin-bottom: 10px;
 }
 p {
@@ -228,6 +229,11 @@ li {
   .view-description{
     width: 50%;
   }
+  .view-description p {
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 20px;
+  }
   .email-mockup {
     width: 25vw;
     margin: 0;
@@ -258,8 +264,16 @@ box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
     z-index: 1;
     transition: all .5s;
     -webkit-box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
--moz-box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
-box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
+    -moz-box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
+    box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* Safari 3-8  */  
+  }
+  .mockup-desktop:hover {
+    z-index: 4;
+    -webkit-transform: rotateY(10deg); /* Safari 3-8  */
+    transform: rotateY(10deg);
+    
   }
   img.mockup-mobile{
       position: relative;
@@ -272,9 +286,7 @@ box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
 -moz-box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
 box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
   }
-  .mockup-desktop:hover {
-    z-index: 4;
-  }
+  
   .scroll-down {
     right: -117px;
     top: 45vh;

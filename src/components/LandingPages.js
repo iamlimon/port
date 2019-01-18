@@ -8,9 +8,9 @@ import LoanItMockupMobile from '../assets/mockup-loanit-lp-mobile.png';
 
 
 let emailProjects =  [
-    {'h1': 'Momentum Landing Page', 'p': 'This is the momentum creative work.', 'desktopmockup': MomentumMockupDesktop,'mobilemockup': MomentumMockupMobile},
-    {'h1': 'First Direct Lending Landing Page', 'p': 'This is the eRates creative work.', 'desktopmockup': FDLMockupDesktop,'mobilemockup': FDLMockupMobile},
-    {'h1': 'Loan it Landing Page', 'p': 'This is the North American creative work.', 'desktopmockup': LoanItMockupDesktop,'mobilemockup': LoanItMockupMobile}
+    {'h1': 'Landing Pages', 'p': 'Momentum Loan', 'desktopmockup': MomentumMockupDesktop,'mobilemockup': MomentumMockupMobile},
+    {'h1': 'Landing Pages', 'p': 'eRates Mortgage', 'desktopmockup': FDLMockupDesktop,'mobilemockup': FDLMockupMobile},
+    {'h1': 'Landing Pages', 'p': 'North American Mortgage Company', 'desktopmockup': LoanItMockupDesktop,'mobilemockup': LoanItMockupMobile}
 ]
 
 export class LandingPages extends React.Component {
@@ -29,13 +29,18 @@ export class LandingPages extends React.Component {
         this.setState({currentProject: changeProjectID})
     }
 
+    handleClick = (e) => {
+        const imgSrc = e.target.src;
+        this.props.onClick(imgSrc);
+    }
+
     render() {
         const setProject = this.state.currentProject - 1;
         return (
             <div className="view" id="view-email">
                 <div className="view-mockups">
-                    <img src={emailProjects[setProject].desktopmockup} className="mockup-desktop" alt="email-template" />
-                    <img src={emailProjects[setProject].mobilemockup} className="mockup-mobile" alt="email-template" />
+                    <img src={emailProjects[setProject].desktopmockup} onClick={this.handleClick} className="mockup-desktop" alt="email-template" />
+                    <img src={emailProjects[setProject].mobilemockup} onClick={this.handleClick} className="mockup-mobile" alt="email-template" />
                 </div>
                 <div className="view-description">
                 <h1>{emailProjects[setProject].h1}</h1>
