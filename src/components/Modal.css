@@ -8,14 +8,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 2s;
     
 }
 
-.modal img { width: 50vh; }
+.modal img {  height: auto; width: 80vw; }
 
-.modal.hide { display: none; }
+.modal.hide { visibility: hidden;transition: all 2s; }
 
-.modal.show { display: flex; }
+.modal.show { visibility: visible;transition: all 2s; }
 
 
 
@@ -46,4 +47,11 @@
     right: 32px;
     width: 60px;
     height: 60px;
+}
+  
+@media (min-width: 768px) { 
+.modal img {  
+    height: 67vh; 
+    width: auto; 
+}
 }

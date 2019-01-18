@@ -24,10 +24,10 @@ export class Hamburger extends React.Component{
             {!this.state.isHidden && 
             <FadeIn delay="100" transitionDuration="500">
             <div className="menu">
-                <p onClick={this.props.onClick} id="about" >About</p>
-                <p onClick={this.props.onClick} id="email" >Email</p>
-                <p onClick={this.props.onClick} id="landingpages" >Landing Pages</p>
-                <p onClick={this.props.onClick} id="animation" >Animation</p>
+                <p onClick={this.props.onClick} id="0" >About</p>
+                <p onClick={this.props.onClick} id="1" >Email</p>
+                <p onClick={this.props.onClick} id="2" >Landing Pages</p>
+                <p onClick={this.props.onClick} id="3" >Animation</p>
             </div>
             </FadeIn>
             }

@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="App-wrapper">
           <div className="navigation">
-            <Nav onClick={this.goToPage} />
+            <Nav onClick={this.goToPage} exitModal={this.exitModal}/>
           </div>
           <div className="page-content">
             <ReactPageScroller containerWidth="100%" containerHeight="100vh" ref={c => this.reactPageScroller = c} pageOnChange={this.pageOnChange}>
