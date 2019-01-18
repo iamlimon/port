@@ -32,6 +32,7 @@ class App extends Component {
   exitModal = () => { this.setState({ modalVisibility: 'hide'}); }
 
   render() {
+    console.log(this.state.currentPage);
     return (
       <div className="App-wrapper">
           <div className="navigation">
@@ -45,7 +46,7 @@ class App extends Component {
               <Experiment onClick={this.onClickModal} />
               <Animation />
             </ReactPageScroller>
-            <p className="scroll-down">&#x2190;&nbsp;&nbsp;Scroll Down</p>
+            {this.state.currentPage === 5 ? null : <p className="scroll-down">&#x2193;&nbsp;&nbsp;Scroll Down&nbsp;&nbsp;&#x2193;</p>  }
             <Modal exitModal={this.exitModal} visibility={this.state.modalVisibility} modalPic={this.state.modalPic} />
           </div>
        </div>
