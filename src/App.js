@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './css/App.css';
-import { Nav } from './components/Nav';
-import { About } from './components/About';
-import { Email } from './components/Email';
-import { Experiment } from './components/Experiment';
-import { LandingPages } from './components/LandingPages';
-import { Animation } from './components/Animation';
+import Nav from './components/Nav';
+import About from './components/About';
+import Email from './components/Email';
+import Experiment from './components/Experiment';
+import LandingPages from './components/LandingPages';
+import Animation from './components/Animation';
 import Modal from './components/Modal';
 import ReactPageScroller from "react-page-scroller";
 
@@ -17,26 +17,30 @@ class App extends Component {
     modalVisibility: 'hide'
   }
 
+  // Recieves number and changes to that page
   goToPage = (e) => {
-    this.reactPageScroller.goToPage(e.currentTarget.id);
+    var newPage = parseInt(e.currentTarget.id);
+    this.reactPageScroller.goToPage(newPage);
   };
 
+  // If the pages does changes, update the state of Current Page
   pageOnChange = (number) => {
-    var num = parseInt(number);
-    this.setState({currentPage: num});
+    var newPage = parseInt(number);
+    this.setState({currentPage: newPage});
   };
 
-
+  // Open modal of click portfolio image
   onClickModal = pic => { this.setState({ modalPic: pic, modalVisibility: 'show' }) }
 
+
+  // Exits modal on click of X
   exitModal = () => { this.setState({ modalVisibility: 'hide'}); }
 
   render() {
-    console.log(this.state.currentPage);
     return (
       <div className="App-wrapper">
           <div className="navigation">
-            <Nav onClick={this.goToPage} exitModal={this.exitModal}/>
+            <Nav currentPage={this.state.currentPage} onClick={this.goToPage} exitModal={this.exitModal}/>
           </div>
           <div className="page-content">
             <ReactPageScroller containerWidth="100%" containerHeight="100vh" ref={c => this.reactPageScroller = c} pageOnChange={this.pageOnChange}>

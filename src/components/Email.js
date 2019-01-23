@@ -14,22 +14,23 @@ let emailProjects =  [
     {'h1': 'Email Templates', 'p': 'North American Mortgage Company', 'desktopmockup': NAMockupDesktop,'mobilemockup': NAMockupMobile}
 ]
 
-export class Email extends React.Component {
+class Email extends React.Component {
     state = {
         currentProject: 1
     }
 
+    // Changes project using circle tabs
     changeProject = (event) => {
-        let changeProjectID = event.target.id;
-        let getClickedTab = event.target;
+        let clickedTab = event.target;
         let getTabs = document.querySelectorAll('.tab-circle');
         for (var i = 0; i < getTabs.length; i++) {
             getTabs[i].classList.remove('active');
         }
-        getClickedTab.classList.add('active');
-        this.setState({currentProject: changeProjectID})
+        clickedTab.classList.add('active');
+        this.setState({currentProject: clickedTab.id})
     }
 
+    // Get image src for modal
     handleClick = (e) => {
         const imgSrc = e.target.src;
         this.props.onClick(imgSrc);
@@ -58,3 +59,5 @@ export class Email extends React.Component {
         )
     }
 }
+
+export default Email;

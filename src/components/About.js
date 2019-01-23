@@ -1,12 +1,14 @@
 import React from 'react';
 
-export const About = () => {
+const About = () => {
     return (
         <div className="view" id="view-about">
             <div className="about-content">
-            <h1>We are <strong>SoftVu Creative</strong></h1>
-            <p>You can call it magic, but in reality there is no magic wand that can resolve our problems. The solution rests with our team of Creative Wizards’s hard work and discipline. They have developed a 3-step approach to systematically produce great design every single time.</p>
+            <h1>We are <strong>SoftVu</strong></h1>
+            <p>SoftVu’s Marketing CRM maximizes ROI by automating communication to your sales pipeline and existing customer base. We create, manage, distribute, and track automated marketing strategies for direct to consumer markets in the Mortgage Lending industry.</p>
             </div> 
         </div>
     )
 }
+
+export default About;

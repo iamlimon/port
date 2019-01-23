@@ -1,9 +1,9 @@
 import React from 'react';
 import map from '../assets/hsbc-map.png';
 
-export class Experiment extends React.Component {
+class Experiment extends React.Component {
 
-
+    // Get image src for modal
     handleClick = (e) => {
         const imgSrc = e.target.src;
         this.props.onClick(imgSrc);
@@ -17,11 +17,11 @@ export class Experiment extends React.Component {
                 </div>
                 <div className="view-description">
                     <h1>We like to experiment</h1>
-                    <p>HSBC Interactive Maps</p>
+                    <p>Interactive Maps</p>
                 </div>
             </div>
         )
     }    
 }
 
-
+export default Experiment;

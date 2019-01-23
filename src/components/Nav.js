@@ -2,15 +2,34 @@ import React, { Component } from 'react';
 import logo from '../assets/svg/logo-softvu.svg';
 import { Hamburger } from './Hamburger';
 
-export class Nav extends Component {
-
+class Nav extends Component {
+    state = {
+      currentPage: this.props.currentPage
+    }
 
     handleClick = (e) => {
       this.props.exitModal();
       this.props.onClick(e); 
     }
+
+    // Highlight the current page SVG Icon
+    currentSVGHighlight = () => {
+      const getCurrentPage = this.state.currentPage;
+      const getSVG = Array.from(document.querySelectorAll('.nav-icon'));
+      for (let i = 0; i < getSVG.length; i++) {
+        getSVG[i] === getSVG[getCurrentPage-2] ? getSVG[getCurrentPage-2].style.cssText = "fill: #0bd184;" : getSVG[i].style.cssText = "fill: #666666;"
+      }
+    }
+
+    componentWillReceiveProps(nextProps){
+      if(nextProps.currentPage !== this.props.currentPage){
+          this.setState({currentPage:nextProps.currentPage});
+      }
+    }
  
     render() {
+      console.log(this.state.currentPage);
+      this.state.currentPage === 1 ? console.log('yes') : this.currentSVGHighlight();
       return (
         <nav id="nav">
                 <img src={logo} onClick={this.props.onClick} className="App-logo" alt="logo"  eventkey={1 - 1} id="0" />
@@ -116,6 +135,8 @@ export class Nav extends Component {
       );
     }
   }
+
+  export default Nav;
   
 
   

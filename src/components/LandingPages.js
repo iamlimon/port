@@ -9,26 +9,27 @@ import LoanItMockupMobile from '../assets/mockup-loanit-lp-mobile.png';
 
 let emailProjects =  [
     {'h1': 'Landing Pages', 'p': 'Momentum Loan', 'desktopmockup': MomentumMockupDesktop,'mobilemockup': MomentumMockupMobile},
-    {'h1': 'Landing Pages', 'p': 'eRates Mortgage', 'desktopmockup': FDLMockupDesktop,'mobilemockup': FDLMockupMobile},
+    {'h1': 'Landing Pages', 'p': 'First Direct Lending', 'desktopmockup': FDLMockupDesktop,'mobilemockup': FDLMockupMobile},
     {'h1': 'Landing Pages', 'p': 'North American Mortgage Company', 'desktopmockup': LoanItMockupDesktop,'mobilemockup': LoanItMockupMobile}
 ]
 
-export class LandingPages extends React.Component {
+class LandingPages extends React.Component {
     state = {
         currentProject: 1
     }
 
+    // Changes project using circle tabs
     changeProject = (event) => {
-        let changeProjectID = event.target.id;
-        let getClickedTab = event.target;
+        let clickedTab = event.target;
         let getTabs = document.querySelectorAll('.tab-circle');
         for (var i = 0; i < getTabs.length; i++) {
             getTabs[i].classList.remove('active');
         }
-        getClickedTab.classList.add('active');
-        this.setState({currentProject: changeProjectID})
+        clickedTab.classList.add('active');
+        this.setState({currentProject: clickedTab.id})
     }
 
+    // Get image src for modal
     handleClick = (e) => {
         const imgSrc = e.target.src;
         this.props.onClick(imgSrc);
@@ -55,3 +56,5 @@ export class LandingPages extends React.Component {
         )
     }
 }
+
+export default LandingPages;
