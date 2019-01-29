@@ -1,0 +1,117 @@
+/* View */
+.view {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 0 32px;
+  }
+  .email-mockup {
+    display: block;
+    width: 50vw;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  .view-description{
+    width: 100%;
+  }
+  .animation-project {
+    max-width: 500px;
+  }
+  .mockup-experiment {
+    width: 60vw;
+  }
+  .tab-circle {
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border: 1px solid #666;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 19px;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  .active {
+    background: #666 !important;
+  }
+  .view-mockups img {
+    position: relative;
+    width: 40vw;
+    z-index: 1;
+    transition: all .5s;
+  }
+  .scroll-down {
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    bottom: 10px;
+    letter-spacing: 8px;
+    font-size: 18px;
+    font-weight: 300;
+    animation: strobeText 1s infinite alternate;
+    margin: 0 auto;
+    right: 0;
+    width: 300px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    /* View */
+    .view {
+      flex-direction: row;
+      margin-top: 0;
+      justify-content: center;
+    }
+    .view-description{
+      width: 50%;
+      p {
+        font-weight: 900;
+        font-size: 30px;
+        margin-top: 20px;
+      }
+    }
+    .email-mockup {
+      width: 25vw;
+      margin: 0;
+    }
+    .view-mockups {
+      width: 33%;
+    }
+    .mockup-experiment {
+      width: 25vw !important;
+      box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
+      margin: 0;
+    }
+    .about-content {
+      width: 70vw;
+      border-left: 4px solid #3d699c;
+      padding-left: 32px;
+      h1 {
+        font-size: 59px;
+        margin-bottom: 25px;
+      }
+    }
+    img.mockup-desktop{
+      position: relative;
+      width: 50%;
+      z-index: 1;
+      transition: all .5s;
+      box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
+      transform-style: preserve-3d;
+      &:hover { z-index: 4; transform: rotateY(10deg);}
+    }
+    img.mockup-mobile {
+        position: relative;
+        width: 40%;
+        z-index: 2;
+        left: -100px;
+        top: 51px;
+        transition: all .5s;
+        box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
+    }
+    
+    }

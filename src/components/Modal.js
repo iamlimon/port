@@ -1,5 +1,4 @@
 import React from 'react';
-import './Modal.css';
 
 class Modal extends React.Component {
     state = {
@@ -14,7 +13,10 @@ class Modal extends React.Component {
     render() {
         return (
             <div className={`modal ${this.state.visibility}`}>
-                <div className="exit" onClick={ this.props.exitModal }></div>
+                <div className="exit" onClick={ this.props.exitModal }>
+                    <div className="line"></div>
+                    <div className="line line2"></div>
+                </div>
                 <img src={this.state.modalPic} alt=""/>
                 {this.props.ModalPic}
             </div>

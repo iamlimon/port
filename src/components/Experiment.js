@@ -11,9 +11,9 @@ class Experiment extends React.Component {
 
     render() {
         return (
-            <div className="view" id="view-expirement">
+            <div className="view" id="view-experiment">
                 <div className="view-mockups">
-                    <img className="mockup-expirement" onClick={this.handleClick} src={map} alt="email-template" />
+                    <img className="mockup-experiment" onClick={this.handleClick} src={map} alt="experiment" />
                 </div>
                 <div className="view-description">
                     <h1>We like to experiment</h1>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Zoom from 'react-reveal/Zoom';
 import MomentumMockupDesktop from '../assets/mockup-momentum-et-deskop.png';
 import MomentumMockupMobile from '../assets/mockup-momentum-et-mobile.png';
 import EratesMockupDesktop from '../assets/mockup-erates-et-desktop.png';
@@ -39,7 +38,6 @@ class Email extends React.Component {
     render() {
         const setProject = this.state.currentProject - 1;
         return (
-            <Zoom exit={true}>
             <div className="view" id="view-email">
                 <div className="view-mockups">
                     <img src={emailProjects[setProject].desktopmockup} onClick={this.handleClick} className="mockup-desktop" alt="email-template" />
@@ -55,7 +53,6 @@ class Email extends React.Component {
                 </div>
                 </div>
             </div>
-            </Zoom>
         )
     }
 }

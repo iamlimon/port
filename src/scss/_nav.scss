@@ -1,0 +1,78 @@
+/* Navigation */
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px #bac8d3;
+    background-color: #fff;
+    z-index: 9999;
+    @media (min-width: 768px) { position: fixed; padding: 0 30px; border-bottom-right-radius: 9px; }
+  }
+  .nav-icon-container {
+    display: none;
+    @media (min-width: 768px) { display: flex; }
+  }
+  .hamburger-menu {
+    @media (min-width: 768px) { display: none; }
+    cursor: pointer;
+    .line {
+      height: 4px;
+      background: #444;
+      width: 40px;
+      margin-bottom: 6px;
+    }
+  }
+  #mobile-menu {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+  }
+  .menu {
+    background: rgba(255,255,255, 0.9);
+    padding: 15px 10px 30px 10px;
+    @media (min-width: 768px) { display: none; }
+    p {
+      margin: 0 -10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      &:hover { color: $theme-color-accent; }
+    }
+  }
+  .tooltip {
+    opacity: 0;
+  }
+
+  @media (min-width: 768px) {
+    .nav-icon {
+      height: 35px;
+      padding: 24px;
+      fill: #666;
+      transition: all 1 ease;
+    }
+    .tooltip {
+      height: 0;
+      width: 0;
+    }
+    .tooltip-text {
+      color: #666;
+      font-size: 14px;
+      font-weight: bold; 
+      padding: 14px 10px;
+      display: block;
+      text-align: center;
+      width: 120px;
+      border-radius: 3px;
+      background: rgba(255,255,255,1);
+      position: relative;
+      left: -110px;
+      top: 88px;
+    }
+    .nav-icon:hover {fill: $color-orange; }
+
+    .nav-icon:hover + .tooltip{
+      opacity: 1 !important;
+    }
+  }

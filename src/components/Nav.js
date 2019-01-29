@@ -9,7 +9,11 @@ class Nav extends Component {
 
     handleClick = (e) => {
       this.props.exitModal();
-      this.props.onClick(e); 
+      // this.props.onClick(e); 
+      console.log(e.target);
+      let dataKey = e.target.getAttribute('data-key');
+      let scrollElement = document.getElementById(dataKey);
+      scrollElement.scrollIntoView({behavior: "smooth"});
     }
 
     // Highlight the current page SVG Icon
@@ -32,13 +36,13 @@ class Nav extends Component {
       this.state.currentPage === 1 ? console.log('yes') : this.currentSVGHighlight();
       return (
         <nav id="nav">
-                <img src={logo} onClick={this.props.onClick} className="App-logo" alt="logo"  eventkey={1 - 1} id="0" />
+                <img src={logo} onClick={this.props.onClick} className="logo" alt="SoftVu"  eventkey={1 - 1} id="0" />
                 <Hamburger onClick={this.props.onClick} />
                 <div className="nav-icon-container">
 
 
 
-                  <svg onClick={this.handleClick} alt="Coding Projects" id="1" eventkey={2 - 1} className="nav-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                  <svg onClick={this.handleClick} alt="Coding Projects" id="1" eventkey={2 - 1} data-key="view-email" className="nav-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                   viewBox="0 0 360 360" >
                   <path className="st0" d="M273.8,88.6H86.2c-15.9,0-28.9,13-28.9,28.9v125c0,15.9,13,28.9,28.9,28.9h187.5c15.9,0,28.9-13,28.9-28.9v-125
                   C302.6,101.6,289.7,88.6,273.8,88.6z M234.9,180l52.2-52.1v104.3L234.9,180z M86.2,104.2h187.5c4.1,0,7.7,1.9,10.2,4.8l-84.6,84.6
@@ -53,7 +57,7 @@ class Nav extends Component {
     
                 <div className="tooltip"><div className="tooltip-text">Email</div></div>
 
-                <svg version="1.1" onMouseOver={this.handleHover} onClick={this.handleClick} alt="Coding Projects" eventkey={3 - 1} id="2" className="nav-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                <svg version="1.1" onMouseOver={this.handleHover} onClick={this.handleClick} data-key="view-landingpage"  alt="Coding Projects" eventkey={3 - 1} id="2" className="nav-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="0 0 360 360" >
                 <g>
                 <path className="st0" d="M297.4,70.7H62.6c-9.3,0-16.9,7.6-16.9,16.9v184.9c0,9.3,7.6,16.9,16.9,16.9h234.7c9.3,0,16.9-7.6,16.9-16.9
@@ -71,7 +75,7 @@ class Nav extends Component {
                 <div className="tooltip"><div className="tooltip-text">Landing Pages</div></div>
 
 
-                <svg version="1.1" onMouseOver={this.handleHover} onClick={this.handleClick} alt="Coding Projects" eventkey={4 - 1} id="3" className="nav-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                <svg version="1.1" onMouseOver={this.handleHover} onClick={this.handleClick} data-key="view-experiment" alt="Coding Projects" eventkey={4 - 1} id="3" className="nav-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="0 0 360 360"  >
 
               <g>
@@ -110,7 +114,7 @@ class Nav extends Component {
 
 
 
-                <svg version="1.1" onMouseOver={this.handleHover} onClick={this.handleClick} alt="Coding Projects" eventkey={5 - 1} id="4" className="nav-icon" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+                <svg version="1.1" onMouseOver={this.handleHover} onClick={this.handleClick} data-key="view-animation" alt="Coding Projects" eventkey={5 - 1} id="4" className="nav-icon" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                   viewBox="0 0 360 360">
                 <g>
                   <path className="st0" d="M290.6,55.1H69.4C51,55.1,36,70.1,36,88.5v135.2c0,18.4,15,33.4,33.4,33.4h76.3c-0.4,4-2.9,20.8-14.4,21.2

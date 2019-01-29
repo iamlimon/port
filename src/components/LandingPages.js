@@ -38,7 +38,7 @@ class LandingPages extends React.Component {
     render() {
         const setProject = this.state.currentProject - 1;
         return (
-            <div className="view" id="view-email">
+            <div className="view" id="view-landingpage">
                 <div className="view-mockups">
                     <img src={emailProjects[setProject].desktopmockup} onClick={this.handleClick} className="mockup-desktop" alt="email-template" />
                     <img src={emailProjects[setProject].mobilemockup} onClick={this.handleClick} className="mockup-mobile" alt="email-template" />

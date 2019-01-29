@@ -1,0 +1,36 @@
+body, html {
+    color: $theme-color-accent;
+    font-family: 'Lato', sans-serif;
+    box-sizing: content-box;
+    background-color: $theme-color-secondary;
+  }
+  body {
+    background:url(../assets/softvu-logo-bg-v2.png) no-repeat fixed;
+    background-size: cover;
+    animation: backgroundScroll 30s infinite alternate;
+  }
+  a {
+    color: $theme-color-accent;
+  }
+  h1 {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    @media (min-width: 768px) { font-size: 45px; line-height: 50px; } 
+  }
+  p {
+    font-size: 16px;
+    margin-top: 0; 
+    line-height: 1.5;
+    @media (min-width: 768px) { font-size: 20px; line-height: 35px;}
+  }
+  li {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .logo {
+    width: 40px;
+    @media (min-width: 768px) { margin-right: 78px; }
+  } 

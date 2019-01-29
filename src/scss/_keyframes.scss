@@ -1,0 +1,9 @@
+@keyframes backgroundScroll {
+    0% { background-position: 0 0; }
+    50% { background-position: 200px 100px; }
+    100% { background-position: -100px 200px; }
+  }
+@keyframes strobeText {
+    0% { opacity: .3; }
+    100% { opacity: .8; }
+}
