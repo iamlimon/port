@@ -1,5 +1,8 @@
 .tab-row {
     margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) { justify-content: flex-start; }
     .tab-circle {
       height: 20px;
       width: 20px;

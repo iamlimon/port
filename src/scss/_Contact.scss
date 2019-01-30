@@ -3,8 +3,12 @@
     background-size: cover;
     margin-bottom: 0;
     color: #fff;
+    justify-content: center;
+    height: 80vh;
+    @media (min-width: 768px) { height: 100vh; }
     input {
-      width: 368px;
+      width: 90%;
+      @media (min-width: 768px) { width: 368px; }
       height: 42px;
       display: block;
       margin-top: 20px;
