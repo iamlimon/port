@@ -1,9 +1,9 @@
 import React from 'react';
-import MomentumMockupDesktop from '../assets/mockup-momentum-et-deskop.png';
+import MomentumMockupDesktop from '../assets/mockup-momentum-mac.png';
 import MomentumMockupMobile from '../assets/mockup-momentum-et-mobile.png';
-import EratesMockupDesktop from '../assets/mockup-erates-et-desktop.png';
+import EratesMockupDesktop from '../assets/mockup-erates-mac.png';
 import EratesMockupMobile from '../assets/mockup-erates-et-mobile.png';
-import NAMockupDesktop from '../assets/mockup-na-et-desktop.png';
+import NAMockupDesktop from '../assets/mockup-na-mac.png';
 import NAMockupMobile from '../assets/mockup-na-et-mobile.png';
 import { Momentum, ERates, NA } from '../components/EmailTemplates';
 
@@ -50,7 +50,7 @@ class Email extends React.Component {
             <div className="view" id="view-email">
                 <div className="view-mockups">
                     <img src={emailProjects[setProject].desktopmockup} onClick={this.handleClick} className="mockup-desktop" alt="email-template" />
-                    <img src={emailProjects[setProject].mobilemockup} onClick={this.handleClick}  className="mockup-mobile" alt="email-template" />
+                    {/* <img src={emailProjects[setProject].mobilemockup} onClick={this.handleClick}  className="mockup-mobile" alt="email-template" /> */}
                 </div>
                 <div className="view-description">
                 <h1>Engaging Email Template</h1>
