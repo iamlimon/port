@@ -20,7 +20,8 @@ const Animation = () => {
                 </div>
             </div>
             <div className="view-description">
-            <h1>We do video</h1>
+            <h1>We create Video and Animation</h1>
+            <p>Easily create professional videos with the intuitive Promo Editor. Promote your business in the most creative way.</p>
             <ul>
                 <li><a href="https://softvu.wistia.com/medias/xph23ipb9c" rel="noopener noreferrer" target="_blank">Truhome Animation</a></li>
                 <li><a href="https://softvu.wistia.com/medias/w31b1w83y9" rel="noopener noreferrer" target="_blank">HomeDirect</a></li>

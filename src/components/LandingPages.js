@@ -5,6 +5,7 @@ import FDLMockupDesktop from '../assets/mockup-fdl-lp-desktop.png';
 import FDLMockupMobile from '../assets/mockup-fdl-lp-mobile.png';
 import LoanItMockupDesktop from '../assets/mockup-loanit-lp-desktop.png';
 import LoanItMockupMobile from '../assets/mockup-loanit-lp-mobile.png';
+import { Momentum, FirstDirectLending, NA } from '../components/LandingPageExamples';
 
 
 let emailProjects =  [
@@ -37,6 +38,7 @@ class LandingPages extends React.Component {
 
     render() {
         const setProject = this.state.currentProject - 1;
+        let landingPages = [<Momentum />, <FirstDirectLending />, <NA />]
         return (
             <div className="view" id="view-landingpage">
                 <div className="view-mockups">
@@ -44,8 +46,9 @@ class LandingPages extends React.Component {
                     <img src={emailProjects[setProject].mobilemockup} onClick={this.handleClick} className="mockup-mobile" alt="email-template" />
                 </div>
                 <div className="view-description">
-                <h1>{emailProjects[setProject].h1}</h1>
-                <p>{emailProjects[setProject].p}</p>
+                <h1>Modern Landing Pages</h1>
+                <p>Whether you have branding guidelines or not, our team will design personalized, customized, and responsive assets to engage leads and drive results.</p>
+                {landingPages[setProject]}
                 <div className="tab-row">
                     <div id="1" className="tab-circle active" onClick={this.changeProject.bind(this)}></div>
                     <div id="2" className="tab-circle" onClick={this.changeProject}></div>
