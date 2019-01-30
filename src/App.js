@@ -6,6 +6,7 @@ import Email from './components/Email';
 import Experiment from './components/Experiment';
 import LandingPages from './components/LandingPages';
 import Animation from './components/Animation';
+import Contact from './components/Contact';
 import Modal from './components/Modal';
 
 
@@ -33,6 +34,7 @@ class App extends Component {
             <LandingPages onClick={this.onClickModal} />
             <Experiment onClick={this.onClickModal} />
             <Animation />
+            <Contact />
             {this.state.currentPage === 5 ? null : <p className="scroll-down">&#x2193;&nbsp;&nbsp;Scroll Down&nbsp;&nbsp;&#x2193;</p>  }
             <Modal exitModal={this.exitModal} visibility={this.state.modalVisibility} modalPic={this.state.modalPic} />
           </div>

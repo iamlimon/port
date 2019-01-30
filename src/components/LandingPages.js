@@ -5,10 +5,10 @@ import LoanItMockupDesktop from '../assets/mockup-loanit-mac-lp.png';
 import { Momentum, FirstDirectLending, NA } from '../components/LandingPageExamples';
 
 
-let emailProjects =  [
-    {'h1': 'Landing Pages', 'p': 'Momentum Loan', 'desktopmockup': MomentumMockupDesktop,},
-    {'h1': 'Landing Pages', 'p': 'First Direct Lending', 'desktopmockup': FDLMockupDesktop,},
-    {'h1': 'Landing Pages', 'p': 'North American Mortgage Company', 'desktopmockup': LoanItMockupDesktop,}
+let landingPageProjects =  [
+    {'desktopmockup': MomentumMockupDesktop,},
+    {'desktopmockup': FDLMockupDesktop,},
+    {'desktopmockup': LoanItMockupDesktop,}
 ]
 
 class LandingPages extends React.Component {
@@ -19,7 +19,7 @@ class LandingPages extends React.Component {
     // Changes project using circle tabs
     changeProject = (event) => {
         let clickedTab = event.target;
-        let getTabs = document.querySelectorAll('.tab-circle');
+        let getTabs = document.querySelectorAll('#view-landingpage .tab-circle');
         for (var i = 0; i < getTabs.length; i++) {
             getTabs[i].classList.remove('active');
         }
@@ -49,8 +49,7 @@ class LandingPages extends React.Component {
                 </div>
                 </div>
                 <div className="view-mockups">
-                    <img src={emailProjects[setProject].desktopmockup} onClick={this.handleClick} className="mockup-desktop" alt="email-template" />
-                    {/* <img src={emailProjects[setProject].mobilemockup} onClick={this.handleClick} className="mockup-mobile" alt="email-template" /> */}
+                    <img src={landingPageProjects[setProject].desktopmockup} onClick={this.handleClick} className="mockup-desktop" alt="email-template" />
                 </div>
             </div>
         )

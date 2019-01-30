@@ -1,0 +1,17 @@
+.tab-row {
+    margin-top: 32px;
+    .tab-circle {
+      height: 20px;
+      width: 20px;
+      background: transparent;
+      border: 1px solid rgb(62, 150, 123);
+      border-radius: 100%;
+      display: inline-block;
+      margin-right: 19px;
+      cursor: pointer;
+      transition: all .5s;
+    }
+  }
+  .active {
+    background: rgb(62, 150, 123) !important;
+  }

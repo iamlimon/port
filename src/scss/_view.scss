@@ -24,30 +24,13 @@
   .mockup-experiment {
     width: 60vw;
   }
-  .tab-row {
-    margin-top: 32px;
-    .tab-circle {
-      height: 20px;
-      width: 20px;
-      background: transparent;
-      border: 1px solid #fff;
-      border-radius: 100%;
-      display: inline-block;
-      margin-right: 19px;
-      cursor: pointer;
-      transition: all .5s;
-    }
-  }
   #view-about {
     background: #5f2c82;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   h1 { color: #fff; }
   p { color: #fff; }
   }
-  .active {
-    background: $color-vermillion !important;
-  }
+  
   .view-mockups img {
     position: relative;
     width: 40vw;
@@ -55,21 +38,22 @@
     transition: all .5s;
   }
   .scroll-down {
-    position: fixed;
+    position: absolute;
     color: #fff;
     left: 0;
     z-index: 100;
-    bottom: 10px;
+    bottom: 33px;
     letter-spacing: 8px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
+    -webkit-animation: strobeText 1s infinite alternate;
     animation: strobeText 1s infinite alternate;
     margin: 0 auto;
     right: 0;
-    width: 300px;
+    width: 324px;
     text-align: center;
   }
-
+  
   @media (min-width: 768px) {
     /* View */
     .view {
@@ -78,15 +62,20 @@
       justify-content: center;
     }
     .view-description{
+      width: 42%;
+      padding-left: 96px;
+    }
+    .view-mockups {
       width: 35%;
     }
+    #view-landingpage .view-mockups {
+      width: 40%;
+  }
     .email-mockup {
       width: 25vw;
       margin: 0;
     }
-    .view-mockups {
-      width: 45%;
-    }
+    
     .mockup-experiment {
       width: 25vw !important;
       box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
@@ -103,10 +92,9 @@
     }
     img.mockup-desktop{
       position: relative;
-      width: 50%;
+      width: 100%;
       z-index: 1;
       transition: all .5s;
-      box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
       transform-style: preserve-3d;
       &:hover { z-index: 4; transform: rotateY(10deg);}
     }
