@@ -24,13 +24,6 @@
   .mockup-experiment {
     width: 60vw;
   }
-  #view-about {
-    background: #5f2c82;  /* fallback for old browsers */
-    background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  h1 { color: #fff; }
-  p { color: #fff; }
-  }
-  
   .view-mockups img {
     position: relative;
     width: 40vw;
@@ -80,15 +73,6 @@
       width: 25vw !important;
       box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
       margin: 0;
-    }
-    .about-content {
-      width: 70vw;
-      border-left: 6px solid #ffff;
-      padding-left: 32px;
-      h1 {
-        font-size: 59px;
-        margin-bottom: 25px;
-      }
     }
     img.mockup-desktop{
       position: relative;

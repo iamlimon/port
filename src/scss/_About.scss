@@ -1,0 +1,19 @@
+#view-about {
+    background: #5f2c82;  /* fallback for old browsers */
+    background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  h1 { color: #fff; }
+  p { color: #fff; }
+  }
+
+
+@media (min-width: 768px) {
+    .about-content {
+      width: 70vw;
+      border-left: 6px solid #ffff;
+      padding-left: 32px;
+      h1 {
+        font-size: 59px;
+        margin-bottom: 25px;
+      }
+    }
+}
