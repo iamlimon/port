@@ -1,6 +1,6 @@
 #view-about {
-  background: #5f2c82; 
   height: 100vh;
+  background: #5f2c82; 
   background: linear-gradient(to right, #49a09d, #5f2c82); 
   .about-content { margin-top: 10vh;}
   h1 { color: #fff; }
@@ -17,6 +17,7 @@
       margin-top: 0;
       h1 {
         font-size: 59px;
+        color: #333;
         margin-bottom: 25px;
       }
     }
