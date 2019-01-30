@@ -7,3 +7,9 @@
     0% { opacity: .3; }
     100% { opacity: .8; }
 }
+
+@keyframes navFadeIn {
+    0% { top: -90px; }
+    50% { top: -90px; }
+    100% { top: 0; }
+}

@@ -6,7 +6,13 @@
     padding: 20px 30px;
     background-color: #fff;
     z-index: 9999;
-    @media (min-width: 768px) { position: fixed; padding: 0 30px; border-bottom-right-radius: 9px; }
+    box-shadow: 10px 10px 72px -19px rgba(0,0,0,0.62);
+    @media (min-width: 768px) { 
+      position: fixed; 
+      padding: 0 30px; 
+      border-bottom-right-radius: 9px;
+      animation: navFadeIn 1s ease;
+     }
   }
   .nav-icon-container {
     display: none;
